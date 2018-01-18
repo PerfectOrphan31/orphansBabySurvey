@@ -1,0 +1,29 @@
+{
+  "name": "babybaby",
+  "version": "1.0.0",
+  "description": "A survey app to ask friends and family what gender my baby will be and save the response in a Mongo DB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Heroku",
+    "MongoDB",
+    "Node",
+    "Express",
+    "Pug"
+  ],
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-validator": "^4.3.0",
+    "mongodb": "^3.0.1",
+    "mongoose": "^5.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PerfectOrphan31/orphansBabySurvey.git"
+  },
+  "author": "Jay McDoniel"
+}
