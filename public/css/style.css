@@ -27,6 +27,11 @@ a.hidden{
   background-color: transparent;
   cursor: default;
 }
+a.source{
+  background: none;
+  color: black;
+  text-decoration: none;
+}
 a:hover{
   text-decoration: underline;
 }
