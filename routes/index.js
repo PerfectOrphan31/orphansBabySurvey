@@ -45,14 +45,14 @@ router.post("/", (req, res, next) => {
 router.get("/results", (req, res, next) => {
   Answer.find({}, {_id:0,email:0,__v:0},(err, answers)=>{
     if(err){ 
-      console.error(err)
-      res.render('results',{err})
+      console.error(err);
+      res.render('results',{err});
     }else{
-      res.render('results',{answers: answers})
+      res.render('results',{answers: answers});
     }
   });
 });
 router.get("/reveal",(req,res,next)=>{
   res.render('reveal');
-})
+});
 module.exports = router;
