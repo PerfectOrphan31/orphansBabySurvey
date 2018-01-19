@@ -3,20 +3,22 @@ extends ./layout/layout
 block content_head
   h1 Welcome to the Results Page
 block content_body
-  .column
-    .table
-      table
-        thead
-          tr  
-            th Name
-            th Choice
-        tbody
-          each ans in answers
-            tr
-              td= ans.name
-              td= ans.choice
-  .column
-    .ct-chart.ct-square
+  .row
+    .column.abs
+      .table
+        table
+          thead
+            tr  
+              th Name
+              th Choice
+          tbody
+            each ans in answers
+              tr
+                td= ans.name
+                td= ans.choice
+    .column.fixed
+      a.hidden(href="/reveal")
+        .ct-chart.ct-square
   
   script.
     let square = '75%';
