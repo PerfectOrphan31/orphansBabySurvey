@@ -11,7 +11,6 @@ const uri = process.env.MONGODB_URI || 'mongodb://heroku_ztrjz5v4:qd9qf3glaih167
 mongoose.Promise = global.Promise
 mongoose.connect(uri);
 let db = mongoose.connection;
-const PORT = 3001 || process.env.PORT;
 
 const app = express();
 
@@ -51,6 +50,4 @@ app.use((req,res,next)=>{
 // App routing
 app.use('/', router);
 
-app.listen(PORT, ()=>{
-  console.log(`The magic is happenin' on port ${PORT}`);
-})
+module.exports = app;
