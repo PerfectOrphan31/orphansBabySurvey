@@ -1,0 +1,33 @@
+extends ./layout/layout
+block content_head
+  h1 Welcome to the McDoniel's Baby Survey
+  h3 We are very excited to find out the gender of our baby on Saturday, January 20th 2018. 
+  p In the meantime, please enter your name, email, and thought on what the gender will be!
+  if errors
+    each err in errors
+      -console.log(err)
+      if err.msg 
+        .error_from_form
+          p= err.msg 
+      else if err.message
+        .error_from_form
+          p= err.message
+      else 
+        .error_from_form
+          p= err
+block content_body
+  form(method="POST", action="/")
+    label(for="name") Name:
+    input.userInName(type="text", name="name") 
+    br
+    label(for="email") Email:
+    .tooltip 
+      span.tooltiptext Your email is only necessary so that one person may not skew the results.
+      input.userInEmail(type="email", name="email") 
+    br
+    label(for="gender") Gender:
+    select.list(name="gender") 
+      option.boy(value="Boy") Boy
+      option.girl(value="Girl") Girl
+    br
+    input(type="submit", value="I'm sure I'm right!")
