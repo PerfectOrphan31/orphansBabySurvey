@@ -52,4 +52,7 @@ router.get("/results", (req, res, next) => {
     }
   });
 });
+router.get("/reveal",(req,res,next)=>{
+  res.render('reveal');
+})
 module.exports = router;
