@@ -23,6 +23,9 @@ a.home{
 a.results{
   color: rgb(82, 82, 218)
 }
+a.reveal{
+  color: rgb(97, 0, 97);
+}
 a.hidden{
   background-color: transparent;
   cursor: default;
