@@ -16,18 +16,18 @@ block content_head
         .error_from_form
           p= err
 block content_body
-  form(method="POST", action="/")
+  form(method="Get", action="/Results")
     label(for="name") Name:
-    input.userInName(type="text", name="name") 
+    input.userInName(type="text", name="name" disabled) 
     br
     label(for="email") Email:
     .tooltip 
       span.tooltiptext Your email is only necessary so that one person may not skew the results.
-      input.userInEmail(type="email", name="email") 
+      input.userInEmail(type="email", name="email" disabled) 
     br
     label(for="gender") Gender:
     select.list(name="gender") 
       option.boy(value="Boy") Boy
       option.girl(value="Girl") Girl
     br
-    input(type="submit", value="I'm sure I'm right!")
+    input(type="submit", value="Show me what everyone said!")
