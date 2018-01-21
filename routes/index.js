@@ -29,7 +29,7 @@ router.post("/", (req, res, next) => {
       email: email,
       choice: choice
     });
-    Answer.saveAnswer(newAnswer, (err, answer) => {
+    /* Answer.saveAnswer(newAnswer, (err, answer) => {
       if (err) {
         if (err.code === 11000) {
           res.render("landingPage", {errors: {message:`The email ${newAnswer.email} is already in use. Please use a different one.`}});
@@ -39,7 +39,8 @@ router.post("/", (req, res, next) => {
         req.flash("success_msg", "Thank you for your answer");
         res.redirect("/results");
       }
-    }); 
+    });  */
+    res.render('results');
   }
 });
 router.get("/results", (req, res, next) => {
