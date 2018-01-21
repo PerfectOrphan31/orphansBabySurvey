@@ -13,9 +13,14 @@ block content_body
               th Choice
           tbody
             each ans in answers
-              tr
-                td= ans.name
-                td= ans.choice
+              if(ans.choice==='Boy')
+                tr.boy
+                  td= ans.name
+                  td= ans.choice
+              if(ans.choice==='Girl')
+                tr.girl
+                  td= ans.name
+                  td= ans.choice
     .column.fixed
       a.hidden(href="/reveal")
         .ct-chart.ct-square
