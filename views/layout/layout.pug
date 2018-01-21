@@ -7,11 +7,14 @@ html(lang="en")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Alegreya SC")
     link(rel="stylesheet", href="/bower_components/chartist/dist/chartist.min.css")
     link(rel="stylesheet", href="/css/style.css")
+    link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
     script(src="/bower_components/chartist/dist/chartist.min.js")
     title McDoniel Baby Survey
   body
-    a.home(href="/") Home
-    a.results(href="/results") Results
+    .navBar
+      a.home(href="/") Home
+      a.results(href="/results") Results
+      a.reveal(href="/reveal") The Reveal!
     block content_head
     if success_msg
       .success
