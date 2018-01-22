@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 router.get("/", (req, res, next) => {
   res.render("landingPage");
 });
-router.post("/", (req, res, next) => {
+/* router.post("/", (req, res, next) => {
   
   let name = req.body.name;
   let email = req.body.email;
@@ -24,12 +24,12 @@ router.post("/", (req, res, next) => {
   if (errors) {
     res.render("landingPage", { errors });
   } else {
-    let newAnswer = new Answer({
+     let newAnswer = new Answer({
       name: name,
       email: email,
       choice: choice
     });
-    /* Answer.saveAnswer(newAnswer, (err, answer) => {
+     Answer.saveAnswer(newAnswer, (err, answer) => {
       if (err) {
         if (err.code === 11000) {
           res.render("landingPage", {errors: {message:`The email ${newAnswer.email} is already in use. Please use a different one.`}});
@@ -39,17 +39,17 @@ router.post("/", (req, res, next) => {
         req.flash("success_msg", "Thank you for your answer");
         res.redirect("/results");
       }
-    });  */
+    });  
     res.render('results');
   }
-});
+}); */
 router.get("/results", (req, res, next) => {
   Answer.find({}, {_id:0,email:0,__v:0},(err, answers)=>{
     if(err){ 
       console.error(err);
-      res.render('results',{err});
+      return res.render('results',{err});
     }else{
-      res.render('results',{answers: answers});
+      return res.render('results',{answers: answers});
     }
   });
 });

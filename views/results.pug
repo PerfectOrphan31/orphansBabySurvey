@@ -3,28 +3,27 @@ extends ./layout/layout
 block content_head
   h1 Welcome to the Results Page
 block content_body
-  .row
-    .column.abs
-      .table
-        table
-          thead
-            tr  
-              th Name
-              th Choice
-          tbody
-            each ans in answers
-              if(ans.choice==='Boy')
-                tr.boy
-                  td= ans.name
-                  td= ans.choice
-              if(ans.choice==='Girl')
-                tr.girl
-                  td= ans.name
-                  td= ans.choice
-    .column.fixed
-      a.hidden(href="/reveal")
-        .ct-chart.ct-square
-  
+  .column.abs
+    .table
+      table
+        thead
+          tr  
+            th Name
+            th Choice
+        tbody
+          each ans in answers
+            if(ans.choice==='Boy')
+              tr.boy
+                td= ans.name
+                td= ans.choice
+            if(ans.choice==='Girl')
+              tr.girl
+                td= ans.name
+                td= ans.choice
+  .column.fixed
+    a.hidden(href="/reveal")
+      .ct-chart.ct-square
+
   script.
     let square = '75%';
     let options = {

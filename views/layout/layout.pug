@@ -22,7 +22,8 @@ html(lang="en")
     if error_msg
       .error
         p= error_msg
-    block content_body
+    .row
+      block content_body
     .footer
       p &copy Jay McDoniel, 2018
         a.source(href="http://github.com/PerfectOrphan31/orphansBabySurvey" target="_blank") Source Code
